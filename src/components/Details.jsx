@@ -3,7 +3,7 @@ import "../styles/details.css"
 
 function Details() {
   return (
-    <div className='details-container pt-5'>
+    <div className='details-container pt-5 pb-5'>
         <div className="detail d-md-flex gap-3 mb-5 align-items-center">
             <div className="video col-md-6 col-10">
                 <video className='large' style={{width:"100%"}} muted autoPlay loop src="https://a.slack-edge.com/445abcc/marketing/img/homepage/e2e-prospects/animations/webm/speed.IN.webm"></video>

@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import Dropdown from "./Dropdown.jsx"
 import "../styles/nav.css"
+import hamburger from "../images/Hamburger-icon.png"
+import search from "../images/search.png"
+import x_mark from "../images/x-mark-128.png"
 
 function Navbar() {
 
@@ -42,15 +45,15 @@ function Navbar() {
             </div>
           </div>
           <div className='buttons d-flex gap-2 align-items-center'>
-            <div className="search"><img style={{height:"30px"}} className='img-fluid' src="src/images/search.png" alt="" /></div>
+            <div className="search"><img style={{height:"30px"}} className='img-fluid' src={search} alt="" /></div>
             <button className='btn'style={{backgroundColor:"#611f69",color:'white'}} >Get Started For Free</button>
-            <div style={{display:"none",cursor:"pointer"}} onClick={() => setmobwidth(100)} className="hamburger"><img style={{height:"30px"}} src="src/images/Hamburger-icon.png" alt="" className="img-fluid" /></div>
+            <div style={{display:"none",cursor:"pointer"}} onClick={() => setmobwidth(100)} className="hamburger"><img style={{height:"30px"}} src={hamburger} alt="" className="img-fluid" /></div>
           </div>
       </div>
       <div className='mobile-nav' style={{position:"fixed",height:"100dvh",backgroundColor:"white",width:`${mobwidth}%`,top:"0",overflow:"hidden"}}>
           <div className="mobile-nav-heading d-flex justify-content-between align-items-center p-3">
                 <div className="image-fluid p-3"><img src="https://a.slack-edge.com/3d92b39/marketing/img/nav/slack-salesforce-logo-nav-black.png" alt="" /></div>
-                <div style={{cursor:"pointer"}} onClick={() =>setmobwidth(0)} className="x-mark "><img style={{height:"15px"}} src="src/images/x-mark-128.png" alt="" className="img-fluid" /></div>
+                <div style={{cursor:"pointer"}} onClick={() =>setmobwidth(0)} className="x-mark "><img style={{height:"15px"}} src={x_mark} alt="" className="img-fluid" /></div>
           </div>
           <div className="nav-options ps-5 pe-3 d-flex justify-content-between">
             <p style={{fontWeight:"700",fontSize:"1.2rem"}}>Features</p>
